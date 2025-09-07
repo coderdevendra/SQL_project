@@ -82,6 +82,9 @@ from Hospital_Data
 group by City ;
 
 --8. Average Length of Stay Per Department 
+select department, avg(discharge_date - admission_date) as avg_days_spend 
+from Hospital_Data 
+group by department; 
 
 
 
@@ -101,6 +104,7 @@ select  extract( month from admission_date) as month ,sum(medical_expenses) as t
 from Hospital_Data
 group by extract( month from admission_date)
 order by  month ;
+
 
 
 
